@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator EX LAB</title>
+    <!-- CSS Area-->
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            margin: 60px;
+        }
+        input{
+            margin-bottom: 20px;
+            width: 100%;
+            height: 30px;
+        }
+        .buttons{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+        }
+        button{
+            background-color : grey;
+            height: 50px;
+            font-size: 20px;
+            width: 50px;
+        }
+    </style>
+</head>
+<!-- HTML AREA -->
+<body>
+    
+    <div class="calculator">
+        <h1>My Calculator</h1>
+        <input type="text" id="display">
+        <div class="buttons">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>/</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>*</button> 
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>-</button>
+
+            <button>0</button>
+            <button>C</button>
+            <button>+</button>
+            <button>=</button> 
+        </div>
+    </div>
+    <!-- This is the Calculator script -->
+    <script>
+        const display = document.getElementById("display")
+        const buttons = document.querySelectorAll("button");
+
+        let currentInput = "";
+
+        buttons.forEach (button =>{
+            button.addEventListener("click", () => {
+                const value = button.textContent;
+            if (value === "C") {
+                currentInput ="";
+                display.value = "";
+            }
+            else if (value ==="="){
+                try{
+                    currentInput = eval(currentInput); //the calculator expression
+                    display.value = currentInput;
+                } catch{
+                    display.value = "Error";
+                    currentInput = "";
+                } 
+            }
+            //Numbers & operator
+            else{
+                currentInput += value;
+                display.value = currentInput;
+            }  
+        });
+    });
+    </script>
+</body>
+</html>
