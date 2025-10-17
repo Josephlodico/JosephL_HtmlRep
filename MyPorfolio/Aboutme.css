@@ -1,0 +1,73 @@
+.arrow-btn:hover {
+        background: silver;
+        transform: translateX(-5px);
+    }
+    .flipped {
+        display: inline-block;
+        transform: scaleX(-1);
+    }
+    span{
+        color: black;
+        font-weight: bold;
+    }
+
+    body{
+        background-image: url("PurpleArtSunsetB.png");
+        background-size: cover;
+        align-items: center; 
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 100vh;
+        margin: 0;
+        padding-top: 30px;
+        
+    }
+    h1{
+        color: black;
+        text-align: center;
+    }
+
+    .arrow-btn-left{
+        position: fixed;
+        top:20px;
+        left: 25px;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        background: none;
+        transition: color 0.3 ease, transform 0.2 ease;
+        
+    }
+    .arrow-btn-left:hover{
+        background: silver;
+        transform: translateX(-5px);
+    }
+
+    .arrow-btn-left span{
+        color: black;
+        font-weight: bold;  
+    }
+
+    .snapchat-avatar,.about-text{
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .snapchat-avatar img{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 30px;
+
+    }
+
+    .about-text{
+        text-align: left;
+        color: black;
+        max-width: 500px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
