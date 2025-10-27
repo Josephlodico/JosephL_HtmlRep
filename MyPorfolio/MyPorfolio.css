@@ -7,15 +7,8 @@ body{
         min-height: 100vh;
         margin: 0;
         padding-top: 30px;
+        cursor: pointer; 
         
-    }
-    hr{
-        border: 2px solid black;
-        border-radius: 5px;
-        background: #bbb;
-        height: 2px;
-        margin: 20px auto;
-        width: 80%;
     }
     h1{
         color: black;
@@ -25,9 +18,6 @@ body{
         color: black;
         font-weight: bold;
     }
-    
-    .top-hr { border: none; height: 2px; background: #bbb; margin: 24px 0; width: 100%; margin-left: auto; margin-right: auto; }
-    
     /* JL Main Profile Card */
     .profile-card{
         background: silver;
@@ -44,8 +34,8 @@ body{
     .centered { margin-left: auto; margin-right: auto; }
 
     .profile-card img.profile-pic{
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid black;
@@ -58,43 +48,26 @@ body{
         color: black;
     }
     hr { border: none; height:1px; background:#e0e0e0; margin: 12px 0; }
+/* ----------------------------------------------------------------------------- */
+    /* Style for logos (social-container/social-box*/
+    .social-box img {
+        width: 80px;
+        height: auto;
+        transition: transform 0.2 ease;
+    }
+    .social-box:hover img{
+        transform: scale(1.1); /* small zoom on hover */
+    }
     .social-container{
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        align-items: center;
         gap: 20px;
         margin-top: 20px;
+        margin-bottom: 40px;
     }
-    .social-box{
-      border-radius: 15px;
-      width: 150px;
-      height: 120px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,1);
-      transition: transform 0.18s ease, box-shadow 0.25s ease;
-      text-decoration: none;
-      color: black;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* icon and label styling (default to white; platform classes override background) */
-    .social-box i {
-        font-size: 34px;
-        margin-bottom: 8px;
-    }
-    .social-box span{
-        font-weight: bold;
-        color: White;
-        font-size: 16px;
-    }
-
-    .social-box:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 18px 35px rgba(0,0,0,1);
-    }
+    /* ------------------------------------------------------------------------ */
+ 
     .profile-card:hover{
         transform: translateY(-5px);
         box-shadow: 0 15px 30px rgba(0,0,0,1);
@@ -152,18 +125,6 @@ body{
     text-decoration: underline;
 }
 
-    /* Platform-specific colors */
-    .social-box.linkedin { background: linear-gradient(135deg,#0077b5,#005f8a); }
-    .social-box.github   { background: linear-gradient(135deg,#333333,#0b0b0b); }
-    .social-box.itchio   { background: linear-gradient(135deg,#ff6b6b,#ff4c4c); }
-
-    /* Slight icon tint on hover (optional) */
-    .social-box.linkedin:hover i { color: white }
-    .social-box.github:hover i   { color: white }
-    .social-box.itchio:hover i   { color: white}
-
-
-
 /* button styling Section for example: the about me button */
 .cv-btn,.AboutMe-btn,.MyProjects-btn { 
     color: black;
@@ -187,34 +148,40 @@ body{
     justify-content: center;
     margin-bottom: 10px;   
 }
-
-/* Coding & Engine Experience section: Boxes*/
-.Experience-section{
-
+/* -------------------------------Experience Section (little boxes)---------------------------------------------- */
+.experience-section{
+    margin-bottom: 80px;
+}
+.experience-columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.experience-category {
+    flex: 1 1 300px;
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 5vw;
+    min-width: 280px;
 }
-
-.Experience-section h1{
-    font-size: 28px;
+.experience-category h1{
+    font-size: 24px;
     color:black;
-    margin-top: 30px;
+    margin-bottom: 20px;
 }
-
-.Expereince-container{
+/* Container for my boxes */
+.experience-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 0 20px;
 }
-
 .experience-box{
     background: lienear-gradient(135deg,#c4baff,#a084dc);
     color: black;
     font-weight: bold;
-    padding: 10px 10px;
+    padding: 10px 18px;
     border-radius: 10px;
     box-shadow: 0 8px 18px rgba(0,0,0,1);
     transition: transform 0.2s ease, box-shadow 0.3s ease;
@@ -227,7 +194,8 @@ body{
     transform: translateY(-6px);
     box-shadow: 0 14px 20px rgba(0,0,0,1);
 }
-
+/* ---------------------------------Experience Section (little boxes)------------------------------------ */
+/* ----------------------------Style For ABOUT ME Section--------------------------------------------- */
 .snapchat-avatar,.about-text{
         display: inline-block;
         vertical-align: middle;
@@ -245,11 +213,23 @@ body{
     .about-text{
         text-align: left;
         color: black;
-        max-width: 500px;
-        font-size: 18px;
+        max-width: 800px;
+        font-size: 20px;
         font-weight: bold;
         line-height: 1.5;
     }
+/* ----------------------------Style For About ME Section--------------------------------------------- */
+
     html{
         scroll-behavior: smooth;
+    }
+
+    .section-divider, .top-hr{
+        width: 100%;
+        height: 3px;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(90deg, black, #a32f94, #d8243f);
+        margin: 60px auto 40px auto;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }

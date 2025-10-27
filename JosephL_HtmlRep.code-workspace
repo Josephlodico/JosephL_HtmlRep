@@ -7,5 +7,7 @@
 			"path": "../JosephLRep/.git"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "JosephL_HtmlRep"
+	}
 }
