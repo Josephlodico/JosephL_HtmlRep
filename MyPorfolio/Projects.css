@@ -12,7 +12,7 @@
     }
 
     body{
-        background-image: url("PurpleArtSunsetB.png");
+        background-image: url("DarkPurpleBG.jpg");
         background-size: cover;
         align-items: center; 
         flex-direction: column;
@@ -31,7 +31,7 @@
         position: fixed;
         top:20px;
         left: 25px;
-        color: black;
+        color: white;
         font-size: 20px;
         font-weight: bold;
         text-decoration: none;
@@ -40,18 +40,18 @@
         
     }
     .arrow-btn-left:hover{
-        background: silver;
+        background: white;
         transform: translateX(-5px);
     }
 
     .arrow-btn-left span{
-        color: black;
+        color: white;
         font-weight: bold;  
     }
 
     .Project-text{
         text-align: left;
-        color: black;
+        color: white;
         max-width: 500px;
         font-size: 18px;
         font-weight: bold;
